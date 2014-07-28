@@ -68,7 +68,7 @@ class katello_devel (
     ensure => present
   }
 
-  Class['certs'] ~>
+  class{'certs': } ~>
   class { 'certs::apache': } ~>
   class { 'katello_devel::apache': } ~>
   class { 'certs::katello':
